@@ -21,14 +21,6 @@
         var btn = document.getElementById("myButton");
         btn.setAttribute("href", encodedUri);
       }
-        // var link = document.createElement("a");
-        // link.setAttribute("href", encodedUri);
-        // link.setAttribute("download", "my_data.csv");
-        // link.innerHTML= "Click Here to download";
-        // document.body.appendChild(link); // Required for FF
-        //
-        // link.click(); // This will download the data file named "my_data.csv".
-
 
     </script>
 
@@ -40,19 +32,19 @@
 			<div class="file-box">
         <div style="clear:both;margin-bottom:30px;">
           <div class="blockQuote">
-      			<p>User Info</p>
-      			<textarea id="userInfo" contentEditable>
+      			<h3>User Info</h3>
+      			<textarea id="userInfo" style="padding-bottom: 200px;padding-right: 300px;" contentEditable>
       			</textarea>
       		</div>
       		<div class="blockQuote">
-      		<h3>Records Preview</h3>
-      			<textarea id="recordInfo" style="padding-bottom: 200px;padding-left: 200px;" contentEditable>
+      		  <h3>Records Preview</h3>
+      			<textarea id="recordInfo" style="padding-bottom: 200px;padding-right: 300px;" contentEditable>
       			</textarea>
       		</div>
 				</div>
 
 				<a id="myButton" type="button" class="drop-btn" href="javascript:;" download="quoteData.cs"
-         onclick="makeCSV()" style="margin-top:20px;">Download CSV</a>
+         onclick="downloadClick()" style="margin-top:20px;">Download CSV</a>
 			</div>
 		</div>
   </body>
