@@ -10,17 +10,50 @@
     <!-- <script type="text/javascript" src="../js/handler.js"></script> -->
     <script type="text/javascript" src="../js/custom.js"></script>
     <!-- <script type="text/javascript">
-      function makeCSV(){
-        const rows = [["name1", "city1", "some other info"], ["name2", "city2", "more info"]];
-        let csvContent = "data:text/csv;charset=utf-8,";
-        rows.forEach(function(rowArray){
-           let row = rowArray.join(",");
-           csvContent += row + "\r\n";
-        });
-        var encodedUri = encodeURI(csvContent);
-        var btn = document.getElementById("myButton");
-        btn.setAttribute("href", encodedUri);
-      }
+      // function makeDocument() {
+      //   var frame = document.getElementById("theFrame");
+      //
+      //   var doc = document.implementation.createHTMLDocument("New Document");
+      //   var table = doc.createElement("table");
+      //   var row = table.insertRow(0);
+      //   var cell = row.insertCell(0);
+      //   cell.innerHTML = "This is a new paragraph.";
+      //   var cell = row.insertCell(1);
+      //   cell.innerHTML = "This is a new paragraph.";
+      //
+      //   try {
+      //     doc.body.appendChild(table);
+      //   } catch(e) {
+      //     console.log(e);
+      //   }
+      //
+      //   docString = "data:text/html;charset=utf-8," + '<html>'+doc.documentElement.innerHTML+'</html>';
+      //   var encodedUri = encodeURIComponent(docString);
+      //   var btn = document.getElementById("myButton2");
+      //   btn.setAttribute("href", docString);
+      //
+      //
+      //   // Copy the new HTML document into the frame
+      //
+      //   // var destDocument = frame.contentDocument;
+      //   // var srcNode = doc.documentElement;
+      //   // var newNode = destDocument.importNode(srcNode, true);
+      //   //
+      //   // destDocument.replaceChild(newNode, destDocument.documentElement);
+      // }
+
+
+      // function makeCSV(){
+      //   const rows = [["name1", "city1", "some other info"], ["name2", "city2", "more info"]];
+      //   let csvContent = "data:text/csv;charset=utf-8,";
+      //   rows.forEach(function(rowArray){
+      //      let row = rowArray.join(",");
+      //      csvContent += row + "\r\n";
+      //   });
+      //   var encodedUri = encodeURI(csvContent);
+      //   var btn = document.getElementById("myButton");
+      //   btn.setAttribute("href", encodedUri);
+      // }
 
     </script> -->
 
@@ -45,6 +78,8 @@
 
 				<a id="myButton" type="button" class="drop-btn" href="javascript:;" download="quoteData.txt"
          onclick="downloadClick()" style="margin-top:20px;">Download CSV</a>
+         <a id="myButton2" type="button" class="drop-btn" href="javascript:;" download="quoteData.html"
+          onclick="makeDocument()" style="margin-top:20px;">Download HTML</a>
 			</div>
 		</div>
   </body>
